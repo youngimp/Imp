@@ -1,0 +1,386 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World of Gamers</title>
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- normalize css -->
+    <link rel= "stylesheet" href="{% static 'main/css/normalize.css' %}">
+    <!-- custom css -->
+    <link rel = "stylesheet" href = "{% static 'main/css/main.css' %}">
+</head>
+<body>
+
+
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="container flex">
+            <a href="#" class="navbar-brand">World<span>OfGamers</span></a>
+
+            <div class="navbar-collapse">
+                <button type="button" class="navbar-toggler-close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="{% url 'home' %}" class="nav-link">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'game' %}" class="nav-link">games</a>
+                        <span class="nav-item-dropdown">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                        <ul class="nav-item-dropdown-content">
+                            <li><a href="{% url 'pst' %}">PS4/PS5</a></li>
+                            <li><a href="{% url 'XBOX' %}">XBOX</a></li>
+                            <li><a href="{% url 'PC' %}">PC</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'news' %}" class="nav-link">news</a>
+                        </span>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'about' %}" class="nav-link">about us</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'registers' %}" class="nav-link">register</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-icons-group">
+                <form class="search-form">
+                    <div class="search-icon-group">
+                        <input type="search" class="search-control">
+                        <button type="submit" class="search-icon">
+                            <i class="fas fa-search">
+
+                            </i>
+                        </button>
+                    </div>
+                </form>
+                <button type="button" class="navbar-toggler-open">
+                    <i class="fas fa-bars">
+
+                    </i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- end of navbar -->
+
+        <!-- main -->
+        <main>
+            <!-- news section -->
+            <section id = "news">
+                <div class = "title">
+                    <div class = "container">
+                        <h2>
+                            <i class = "fas fa-rss"></i> News
+                        </h2>
+                    </div>
+                </div>
+    
+                    <div class = "container">
+                        <!-- news latest -->
+                        <div class = "news-latest">
+                            <h3>Latest News</h3>
+                            <article>
+                                <div class = "item-img">
+                                    <img src = "{% static 'main/resources/images/news-1.jpg' %}">
+                                    <span>
+                                        <i class = "fas fa-comment"></i> 0
+                                    </span>
+                                </div>
+                                <div class = "item-text">
+                                    <a href = "#" class = "h1">
+                                        <span class = "category">Latest</span>GTA Trilogy Definitive Edition is a mess.
+                                    </a>
+                                    <p class = "text">The Grand Theft Auto: The Trilogy is rife with enough bugs and glitches to make Cyberpunk 2077 flinch. The game, which just released this week and is currently unavailable to purchase after Rockstar removed the purchase links from its website, is filled with graphical glitches. Players are cataloging these issues and other, unintentionally funny problems all over social media and sharing their disbelief, amusement, and confusion.</p>
+                                    <div class = "date">News | Latest | 4 days ago</div>
+                                </div>
+                            </article>
+    
+                            <article>
+                                <div class = "item-img">
+                                    <img src = "{% static 'main/resources/images/news-2.jpg' %}">
+                                    <span>
+                                        <i class = "fas fa-comment"></i> 10
+                                    </span>
+                                </div>
+                                <div class = "item-text">
+                                    <a href = "#" class = "h1">
+                                        <span class = "category">Latest</span>Leaker Details Battlefield 2042's 'Troubled Development'.
+                                    </a>
+                                    <p class = "text">It was no secret that DICE's Battlefield 2042 beta had its fair share of problems as many players were very vocal about the issues they experienced while playing the game. Battlefield 2042's beta was plagued by bugs and glitches from the day it released and not long after this servers began to fill with hackers and cheaters much to the player's and company's dismay.</p>
+                                    <div class = "date">News | Latest | Day ago</div>
+                                </div>
+                            </article>
+    
+                            <article>
+                                <div class = "item-img">
+                                    <img src = "{% static 'main/resources/images/news-3.jpg' %}">
+                                    <span>
+                                        <i class = "fas fa-comment"></i> 77
+                                    </span>
+                                </div>
+                                <div class = "item-text">
+                                    <a href = "#" class = "h1">
+                                        <span class = "category">Latest</span>Elder Scrolls 6 will release for Xbox and PC only
+                                    </a>
+                                    <p class = "text">Ever since Microsoft's Zenimax Media acquisition, the question of whether the Elder Scrolls 6 will be an Xbox platform exclusive has haunted PS5 owners. Starfield will be an Xbox exclusive, much to the chagrin of PlayStation owners, but surely good guy Phil Spencer wouldn't deprive a massive, healthy platform of one of the most anticipated games of all time? Well, that's exactly what Microsoft is going to do..</p>
+                                    <div class = "date">News | Latest | 2 days ago</div>
+                                </div>
+                            </article>
+    
+                            <article>
+                                <div class = "item-img">
+                                    <img src = "{% static 'main/resources/images/news-4.jpg' %}">
+                                    <span>
+                                        <i class = "fas fa-comment"></i> 1053
+                                    </span>
+                                </div>
+                                <div class = "item-text">
+                                    <a href = "#" class = "h1">
+                                        <span class = "category">Popular</span>Team Spirit wins $18M Dota 2 championship in close finals.
+                                    </a>
+                                    <p class = "text">Based in Moscow, Team Spirit will now received the single largest prize payout in esports history: $18,208,300. They're also the first team from Eastern Europe to win since Ukrainian team Natus Vincere (Na'Vi) won the very first Dota 2 International in 2011. </p>
+                                    <div class = "date">News | Popular | 17.10.21</div>
+                                </div>
+                            </article>
+    
+                            <article>
+                                <div class = "item-img">
+                                    <img src = "{% static 'main/resources/images/news-5.jpg' %}">
+                                    <span>
+                                        <i class = "fas fa-comment"></i> 4214
+                                    </span>
+                                </div>
+                                <div class = "item-text">
+                                    <a href = "#" class = "h1">
+                                        <span class = "category">Popular</span>NAVI Wins CS:GO Major 2021.
+                                    </a>
+                                    <p class = "text">The first CS:GO Major in two years, the PGL Major Stockholm 2021 has come to its conclusion. ua NAVI won the championship with a 2 : 0 victory over eu G2 Esports in the grand final, earning $ 1,000,000 for their performance!</p>
+                                    <div class = "date">News | Popular | 7.11.21</div>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- end of news latest -->
+
+                           <!-- games PC -->
+                    <div class = "games-PC">
+                        <h3>GAMES</h3>
+                        <div class = "PC-list">
+                            <article>
+                                <div class = "item-img">
+                                    <img src = "{% static 'main/resources/images/banner-img-3.jpg' %}">
+                                </div>
+                                <div class = "item-text">
+                                    <a href = "#" class = "h1"><span class = "category">FIFA 22</span></a>
+                                </div>
+                            </article>
+
+                            <article>
+                                <div class = "item-img">
+                                    <img src = "{% static 'main/resources/images/game-2.jpg' %}">
+                                </div>
+                                <div class = "item-text">
+                                    <a href = "#" class = "h1"><span class = "category">The Witcher 3:GOTY</span></a>
+                                </div>
+                            </article>
+
+                            <article>
+                                <div class = "item-img">
+                                    <img src = "{% static 'main/resources/images/game-3.jpg' %}">
+                                </div>
+                                <div class = "item-text">
+                                    <a href = "#" class = "h1"><span class = "category">Forza Horizon 5</span></a>
+                                </div>
+                            </article>
+
+                            <article>
+                                <div class = "item-img">
+                                    <img src = "{% static 'main/resources/images/game-4.jpg' %}">
+                                </div>
+                                <div class = "item-text">
+                                    <a href = "#" class = "h1"><span class = "category">Detroit Become Human</span></a>
+                                </div>
+                            </article>
+
+                            <article>
+                                <div class = "item-img">
+                                    <img src = "{% static 'main/resources/images/game-5.jpg' %}">
+                                </div>
+                                <div class = "item-text">
+                                    <a href = "#" class = "h1"><span class = "category">Rainbow Six Siege</span></a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <!-- end of news popular -->
+                </div>
+        </section>
+        <!-- end of news section -->
+
+         <!-- reviews section -->
+         <section id = "games">
+            <div class = "title">
+                <div class = "container">
+                    <h2>
+                        <i class = "fas fa-comments"></i> The Most Anticipated Games of 2022
+                    </h2>
+                </div>
+            </div>
+            <div class = "container">
+                <article>
+                    <div class = "item-img">
+                        <img src = "{% static 'main/resources/images/big-game-1.jpg' %}">
+                        <span>
+                            <i class = "fas fa-star"></i> 767
+                        </span>
+                    </div>
+                    <div class = "item-text">
+                        <a href = "#" class = "h1">
+                            <span class = "category">PS4/PS5</span>God of War: Ragnarok.
+                        </a>
+                        <p class = "text">release date: 2022</p>
+                        <div class = "date"></div>
+                    </div>
+                </article>
+
+                <article>
+                    <div class = "item-img">
+                        <img src = "{% static 'main/resources/images/big-game-2.jpg' %}">
+                        <span>
+                            <i class = "fas fa-star"></i> 533
+                        </span>
+                    </div>
+                    <div class = "item-text">
+                        <a href = "#" class = "h1">
+                            <span class = "category">PS5</span>Horizon Forbidden West.
+                        </a>
+                        <p class = "text">release date: February 18, 2022
+                        </p>
+                        <div class = "date"></div>
+                    </div>
+                </article>
+
+                <article>
+                    <div class = "item-img">
+                        <img src = "{% static 'main/resources/images/big-game-3.jpg' %}">
+                        <span>
+                            <i class = "fas fa-star"></i> 432
+                        </span>
+                    </div>
+                    <div class = "item-text">
+                        <a href = "#" class = "h1">
+                            <span class = "category">PS5</span>Elden Ring.
+                        </a>
+                        <p class = "text">release date: January 21, 2022</p>
+                        <div class = "date"></div>
+                    </div>
+                </article>
+
+                <article>
+                    <div class = "item-img">
+                        <img src = "{% static 'main/resources/images/big-game-4.jpg' %}">
+                        <span>
+                            <i class = "fas fa-star"></i> 221
+                        </span>
+                    </div>
+                    <div class = "item-text">
+                        <a href = "#" class = "h1">
+                            <span class = "category">PC/PS5/XBOX</span>Dying Light 2.
+                        </a>
+                        <p class = "text">February 4, 2022</p>
+                        <div class = "date"></div>
+                    </div>
+                </article>
+
+                <article>
+                    <div class = "item-img">
+                        <img src = "{% static 'main/resources/images/big-game-5.jpg' %}">
+                        <span>
+                            <i class = "fas fa-star"></i> 530
+                        </span>
+                    </div>
+                    <div class = "item-text">
+                        <a href = "#" class = "h1">
+                            <span class = "category">Switch</span>Zelda: Breath of the Wild 2.
+                        </a>
+                        <p class = "text">release date: 2022</p>
+                        <div class = "date"></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- end of reviews section -->
+    </main>
+    <!-- end of main -->
+
+    <!-- footer -->
+    <footer id = "footer">
+        <div class = "container">
+            <div class = "footer-links-1">
+                <h2>Join WOG:</h2>
+                <ul class = "flex">
+                    <li>
+                        <a href = "#"><i class = "fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href = "#"><i class = "fab fa-youtube"></i></a>
+                    </li>
+                    <li>
+                        <a href = "#"><i class = "fab fa-twitch"></i></a>
+                    </li>
+                    <li>
+                        <a href = "#"><i class = "fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href = "#"><i class = "fab fa-twitter"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class = "footer-links-2">
+                <ul class = "flex">
+                    <li>
+                        <a href = "#">About WOG</a>
+                    </li>
+                    <li>
+                        <a href = "#">Adertise</a>
+                    </li>
+                    <li>
+                        <a href = "#">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href = "#">Terms of Use</a>
+                    </li>
+                    <li>
+                        <a href = "#">Contact</a>
+                    </li>
+                    <li>
+                        <a href = "#">Reviews</a>
+                    </li>
+                </ul>
+            </div>
+
+            <p class = "text">&copy; <a href = "#">WOG</a>. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- end of footer -->
+
+
+    
+
+    <!-- custom js -->
+    <script src="{% static 'main/js/script.js' %}"></script>
+</body>
+</html>

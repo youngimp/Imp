@@ -1,0 +1,311 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang='en'>
+    
+	<head>
+     <meta charset='utf-8'>
+    <meta name='description' content='Main Menu'>
+    <meta name="author" content="Nurzhan Kuantyr">
+    <title>World of Gamers</title>
+    <link rel="icon" href="#">
+     <!-- Bootstrap core CSS -->
+    <link rel="StyleSheet" href="{% static 'main/css/games.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+     <style>
+ @media (min-width: 576px)
+        {
+        body
+            {
+                background-color: #E7DFDD;
+
+            }
+        }
+           @media (min-width: 768px)
+        {
+        body
+            {
+                background-color: #E7DFDD;
+
+            }
+        }
+           @media (min-width: 992px)
+        {
+        body
+            {
+                background-color: #E7DFDD;
+
+            }
+        }
+           @media (min-width: 1200px)
+        {
+        body
+            {
+                background-color:#E7DFDD;
+
+            }
+         
+        }
+    </style>
+<!-- header nav -->
+  <header>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0E0B16;">
+  <a class="navbar-brand" href="#">
+    <img src="{% static 'main/resources/images/Shopping-Cart.png' %}" width="40" height="40" class="d-inline-block align-top" alt="Logo">
+  World of Gamers
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+     <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="{% url 'game' %}">Games</a>
+      </li>
+    </ul> 
+          <ul class="nav navbar-nav ml-auto">
+ <div class="btn-group">
+    <a href="{% url 'registers' %}"><button type="button" class="btn btn-primary"  id="loginlogout" >Login</button></a>
+    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+      <a class="dropdown-item" href="userdetails.html">User Details</a>
+
+    </div>
+    </div>
+  
+      
+    <div class="btn-toolbar">
+        <a class="nav-item nav-link" href="cart.html">
+        <button type="button" class="btn btn-secondary ml-2">
+          Checkout <span class="badge badge-light" id="checkout"></span>
+        </button>
+        </a>
+    </div>
+         </ul>
+    </div>
+</nav>
+  </header>      
+  
+<body>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="{% static 'main/resources/images/Plat.jpg' %}" alt="Fortnight_Advert">
+    </div>
+  </div>
+</div>
+<!-- Contains all of the games that can be purchased from the home menu -->
+<div class="container" style="max-width: 95%">
+<!-- Row containing h2 titles for the first 3 games -->
+<div class="row">
+         <div class="col" style="background-color:#061891; color: aliceblue; border:solid #0E0B16 2px;  margin: 2px">
+        <h2>PS5</h2>
+    </div>
+    </div> 
+<div class="row">
+ <div class="col col-sm-12 col-md-6 col-lg-4">
+     <h2>Call of Duty: Modern Vanguard</h2>
+    <img src="{% static 'main/resources/images/Call_of.jpg' %}" alt="Call of Duty: Vanguard" class="homeGames">
+<p class="homePrice">£79</p>
+<p><button type="button" class="btn btn-success"id="CallOfDutyCart">Buy</button>
+    <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseCallOfDuty" aria-expanded="false" aria-controls="collapseCallOfDuty">
+    Learn More
+  </button></p>
+         <div class="collapse" id="collapseCallOfDuty">
+         <div class="card card-body">
+            According to the first revealed single-player campaign gameplay footage "Stalingrad Summer" captured in-engine, Vanguard will feature similar gameplay mechanics previously introduced in Modern Warfare, such as the player being able to mount wielded weapons to flat surfaces, interact with doors and execute takedowns. New gameplay features allow the player the ability to use a more advanced strategic approach in combat such as blind firing from behind cover, breaking through destructible environmental elements or creating new paths to complete objectives by climbing walls.
+    </div>
+    </div>
+    </div>
+     <div class="col col-sm-12 col-md-6 col-lg-4">
+         <h2>Death Stranding</h2>
+    <img src="{% static 'main/resources/images/Death_Stranding_Game.jpeg' %}" alt="Death Stranding" class="homeGames" >
+         <p class="homePrice">£59</p>
+      <p><button type="button" class="btn btn-success" id="DeathStrandingCart">Buy</button>
+    <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseDeathStranding" aria-expanded="false" aria-controls="collapseDeathStranding">
+    Learn More
+  </button></p>
+<div class="collapse" id="collapseDeathStranding">
+  <div class="card card-body">
+   From legendary game creator Hideo Kojima comes an all-new, genre-defying experience for PlayStation4. Sam Bridges must brave a world utterly transformed by the Death Stranding. Carrying the disconnected remnants of our future in his hands, he embarks on a journey to reconnect the shattered world one step at a time. With spectral creatures plaguing the landscape, and humanity on the verge of a mass extinction, it’s up to Sam to journey across the ravaged continent and save mankind from impending annihilation.
+    </div>
+    </div>
+    </div>
+     <div class="col col-sm-12 col-md-6 col-lg-4">
+         <h2>Far Cry 6</h2>
+             <img src="{% static 'main/resources/images/Far_cry_6_.jpg' %}" alt="Far Cry 6" class="homeGames" >
+     <p class="homePrice">£49</p> 
+      <p><button type="button" class="btn btn-success" id="OuterWorldsCart">Buy </button>
+     <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseOuterWorlds" aria-expanded="false" aria-controls="collapseOuterWorlds">
+    Learn More
+  </button></p>
+<div class="collapse" id="collapseFarCry6">
+  <div class="card card-body">
+    In 1967, a guerrilla uprising overthrows the dictator President Gabriel Castillo, leading to Yara's economic collapse; in 2014, his son Antón is elected president and promises stability with the creation of "Viviro", a new cancer treatment drug developed from Yara's tobacco. Seven years later, he announces a draft "lottery" to enslave workers for the tobacco fields. As the Fuerzas Nacionales de Defensa (FND), the country's armed forces, begins rounding up poor citizens in the capital city of Esperanza, Dani joins with friends Lita Torres and Alejo Ruiz, planning to escape to the United States. Alejo is shot and killed for provoking the FND, while Dani and Lita run, reaching a boat headed for Miami. However, the boat is stopped and boarded by Castillo and his special forces. They discover that Castillo's son Diego is among the refugees. Taking his son with him, Castillo orders his right hand man, General Raul Sanchez, to sink the boat and kill everyone on it; Dani is the only survivor, washing ashore on Isla Santuario in the southwest of Yara.
+    </div>
+</div>
+    </div>
+    </div>
+        <div class="row">
+    <div class="col" style="background-color:#06911d; color: aliceblue; border:solid #0E0B16 2px;  margin: 2px">
+    <h2>XBOX X</h2>
+    </div>
+    </div>
+    <div class="row">
+     <div class="col col-sm-12 col-md-6 col-lg-4">
+         <h2>Microsoft Flight Simulator </h2>
+             <img src="{% static 'main/resources/images/FS.jpg' %}" alt="Microsoft Flight Simulator " class="homeGames">
+     <p class="homePrice">£79.99</p>
+      <p><button type="button" id="addcart" class="btn btn-success">Buy</button>
+     <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseFifa20" aria-expanded="false" aria-controls="collapseFifa20">
+    Learn More
+  </button></p>
+<div class="collapse" id="collapseFS">
+  <div class="card card-body">
+    Already a massive hit on the PC, Microsoft Flight Simulator is the next generation of one of the world’s most beloved simulation franchises, and this Summer it will be touching down on Xbox Series X|S. From light planes to wide-body jets, fly highly detailed and stunning aircraft in an incredibly realistic world. Create your flight plan and fly anywhere on the planet. Enjoy flying day or night and face realistic, challenging weather conditions. From world updates to DLC bundles, simmers on Xbox Series X|S can expect the same level of depth as the PC version, allowing them to experience the most authentic and realistic flight simulator we have ever created.
+    </div>
+</div>
+    </div>
+     <div class="col col-sm-12 col-md-6 col-lg-4">
+         <h2>Scorn</h2>
+             <img src="{% static 'main/resources/images/scorn.jpg' %}" alt="Scorn" class="homeGames">
+         <p class="homePrice">£29.99</p>
+         <p><button type="button" class="btn btn-success">Buy</button>
+    <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseScorn" aria-expanded="false" aria-controls="collapseResidentEvil2">
+    Learn More
+  </button></p>
+<div class="collapse" id="collapseScorn">
+  <div class="card card-body">
+    Scorn is an upcoming first-person survival horror adventure video game developed by Ebb Software for Microsoft Windows and Xbox Series X/S. The game is directly inspired by the works of H. R. Giger and Zdzisław Beksiński.
+    </div>
+    </div>
+
+        </div>
+     <div class="col col-sm-12 col-md-6 col-lg-4">
+         <h2>Residemt Evil Village</h2>
+    <img src="{% static 'main/resources/images/RE_V.jpg' %}" alt="Resident Evil: Village" class="homeGames">
+         <p class="homePrice">£49.99</p>
+      <p><button type="button" class="btn btn-success">Buy</button>
+    <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseResidentEvil" aria-expanded="false" aria-controls="collapseMonsterHunter">
+    Learn More
+  </button></p>
+<div class="collapse" id="collapseResidentEvil">
+  <div class="card card-body">
+    Resident Evil Village is set three years after the events of Resident Evil 7, largely on the day of February 9, 2021. Ethan Winters returns as the protagonist. Ethan has been living with his wife Mia and 6-month-old daughter Rosemary when Chris Redfield—the protagonist of previous Resident Evil entries—and his men suddenly appear, murder his wife in cold blood, and kidnap him and his baby daughter, bringing them to a mysterious European village. Ethan has to traverse the village to rescue Rosemary. The village is invaded by werewolf-like mutants called Lycans and governed by four different mutant lords, each controlling their own forces from strongholds within the village. Lady Alcina Dimitrescu,[b] an unusually tall vampiric aristocrat, resides at Castle Dimitrescu with her three daughters Bela, Cassandra, and Daniela, and mutated female attendants. The hallucination-inducing and ghost-like Donna Beneviento rules from her mansion, House Beneviento, and acts through her puppet Angie. The grotesque Salvatore Moreau operates from a reservoir in close proximity to the village and is described as a "merman". Karl Heisenberg, who can manipulate magnetic fields, leads a group of Soldat simulacra from a contemporary factory. All houses respond to a supreme leader figure called Mother Miranda, the ruler of the village who is a "presence worshipped by the villagers.
+    </div>
+    </div>
+        </div>
+    </div>
+          <div class="row">
+    <div class="col" style="background-color:red; color: aliceblue; border:solid #0E0B16 2px;  margin: 2px">
+    <h2>Nintendo</h2>
+    </div>
+    </div>
+    <div class="row">
+ <div class="col col-sm-12 col-md-6 col-lg-4">
+     <h2>Luigi's Mansion 3</h2>
+    <img src="{% static 'main/resources/images/Luigi.jpg' %}" alt="Luigi's Mansion 3" class="homeGames">
+         <p class="homePrice">£48.99</p>
+         <p><button type="button" class="btn btn-success">Buy</button>
+    <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseLuigiMansion3" aria-expanded="false" aria-controls="collapseLuigiMansion3">
+    Learn More
+  </button></p>
+<div class="collapse" id="collapseLuigiMansion3">
+  <div class="card card-body">
+  Luigi embarks on a dream vacation with Mario and friends upon receiving an invitation to a luxurious hotel. However, his dream quickly becomes a nightmare when King Boo reveals everything had been a ploy to capture Mario and friends. With the assistance of Professor E. Gadd once again, the reluctant and cowardly hero Luigi traverses up and down treacherous floors of the now-ominous hotel on a quest to save them.
+    </div>
+    </div>     
+    </div>
+     <div class="col col-sm-12 col-md-6 col-lg-4">
+         <h2>Super Smash Bro. Ultimate</h2>
+              <img src="{% static 'main/resources/images/bros.jpg' %}" alt="Super Smash Bros. Ultimate" class="homeGames">
+          <p class="homePrice">£59.99</p>
+         <p><button type="button" class="btn btn-success">Buy</button>
+    <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseSmashBros" aria-expanded="false" aria-controls="collapseSmashBros">
+    Learn More
+  </button></p>
+<div class="collapse" id="collapseSmashBros">
+  <div class="card card-body">
+It’s not called Super Smash Bros. Ultimate for no reason – this game is the ULTIMATE game for any fans of the original games. There are new stages and new fighters including every fighter ever featured in the series! That’s a whopping 78 fighters. 
+
+Elevate the Super Smash Bros. experience to new heights with faster combat, new attacks, new items, and new defensive options. What’s more? You can hold 4-player free-for-all or kick it up to 8-player battles.
+    </div>
+    </div>
+    </div>
+     <div class="col col-sm-12 col-md-6 col-lg-4">
+         <h2>Super Mario Oddessy</h2>
+    <img src="{% static 'main/resources/images/mario.jpg' %}" alt="Mario Odyssey" class="homeGames">
+         <p class="homePrice">£59.99</p>
+         <p><button type="button" class="btn btn-success">Buy</button>
+    <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseMarioOdyssey" aria-expanded="false" aria-controls="collapseMarioOdyssey">
+    Learn More
+  </button></p>
+<div class="collapse" id="collapseMarioOdyssey">
+  <div class="card card-body">
+Mario embarks on a new journey through the unknown, running and jumping through huge 3D worlds in the first sandbox-style Mario game since Super Mario 64 and Super Mario Sunshine. 
+
+Jump out of the Mushroom Kingdom on a journey through mysterious places and new experiences whilst sailing between worlds aboard an airship. 
+
+Find something interesting? Toss your cap at it and see what happens! There are lots of fun and surprising ways to interact with your surroundings.
+    </div>
+    </div>
+    </div>
+    </div> 
+  <!--Whats New -->
+    <div class="row">
+       <div class="col" style="background-color:#A239ca; color: aliceblue; border:solid #0E0B16 2px;  margin: 2px">
+        <h2>What's New?</h2>
+    </div>
+    </div>
+    <div class="row">
+     <div class="col col-sm-12 col-md-6">
+          <h2>God of War:Ragnarok</h2>
+         <div class="video-container"><iframe width="560" height="315" src="{% static 'main/resources/videos/god_Trim.mp4' %}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+               <div class="bgimg">
+      <div class="topleft">
+          <p id="demo" style="font-size:30px; margin-top : 2%;"></p>
+                   </div>
+          <p><button type="button" class="btn btn-success">Pre-order Now!</button>
+     <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseGodofWar" aria-expanded="false" aria-controls="collapseFinalFantasy">
+    Learn More
+  </button></p>
+<div class="collapse" id="collapseGodofWar">
+  <div class="card card-body">
+    God of War Ragnarök is an upcoming action-adventure game developed by Santa Monica Studio and will be published by Sony Interactive Entertainment. It is scheduled to be released in 2022 for the PlayStation 4 and PlayStation 5. It will be the ninth installment in the God of War series, the ninth chronologically, and the sequel to 2018's God of War.[1] Loosely based on Norse mythology, the game will be set in ancient Norway and feature series protagonists Kratos and his teenage son Atreus. Serving as the finale to the Norse era of the series, the game will cover Ragnarök, a series of events that bring about the end of days and depicts the deaths of the Norse gods, which was foretold to happen in the previous game after Kratos killed the Æsir god Baldur.
+    </div>
+</div>
+</div>       
+    </div>
+<div class="col col-sm-12 col-md-6">
+<h2>God of War:Ragnarok</h2>
+<div class="video-container"><iframe width="560" height="315" src="{% static 'main/resources/videos/god_Trim.mp4' %}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <br>
+    <p><a class="btn btn-link" style="background-color: white" href="" role="button">Link to our full reveiw</a></p>
+    </div>
+    </div>
+    </div>
+    
+<footer>
+    <h3>Social Media</h3>
+    <a type="button" href="#top" class="btn btn-light" style="float: right; margin: 2%;">Return to top</a>   
+    <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+    <a href="https://twitter.com/?lang=en" class="fa fa-twitter"></a>
+    <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+    <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+    <p id="footerTerms">Subject to status. Terms and conditions apply. World Of Gamers Retail Limited acts as a broker and not a lender. Commission may be received. We will introduce to PayPal ™ Copyright&copy; 2021</p>
+</footer>
+    
+<script src="javascript/games.js"></script>
+    <script src="javascript/jquery-min.js"></script>
+    <script src="javascript/localstore.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
